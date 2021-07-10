@@ -10,9 +10,7 @@ module.exports = async function (context, req) {
 
   // parse the body
   var parts = multipart.Parse(body, boundary);
-
   var imageData = parts[0].data;
-
   var convertedResult = Buffer.from(imageData).toString("base64");
 
   context.res = {
